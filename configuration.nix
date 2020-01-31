@@ -52,7 +52,7 @@ in {
       ];
     };
     npmccallum = {
-      shell = posh "" "--device /dev/kvm" "--device /dev/sev" "quay.io/enarx/fedora";
+      shell = posh "" "--device /dev/kvm --device /dev/sev" "quay.io/enarx/fedora";
       isNormalUser = true;
       subUidRanges = [{ startUid = 100000; count = 10000; }];
       subGidRanges = [{ startGid = 100000; count = 10000; }];
@@ -61,7 +61,7 @@ in {
       ];
     };
     mbestavros = {
-      shell = posh "" "--device /dev/kvm" "--device /dev/sev" "quay.io/enarx/fedora";
+      shell = posh "" "--device /dev/kvm --device /dev/sev" "quay.io/enarx/fedora";
       isNormalUser = true;
       subUidRanges = [{ startUid = 110000; count = 10000; }];
       subGidRanges = [{ startGid = 110000; count = 10000; }];
@@ -70,7 +70,7 @@ in {
       ];
     };
     lsturman = {
-      shell = posh "" "--device /dev/kvm" "--device /dev/sev" "quay.io/enarx/fedora";
+      shell = posh "" "--device /dev/kvm --device /dev/sev" "quay.io/enarx/fedora";
       isNormalUser = true;
       subUidRanges = [{ startUid = 120000; count = 10000; }];
       subGidRanges = [{ startGid = 120000; count = 10000; }];
@@ -79,7 +79,7 @@ in {
       ];
     };
     ckuehl = {
-      shell = posh "" "--device /dev/kvm" "--device /dev/sev" "quay.io/enarx/fedora";
+      shell = posh "" "--device /dev/kvm --device /dev/sev" "quay.io/enarx/fedora";
       isNormalUser = true;
       subUidRanges = [{ startUid = 130000; count = 10000; }];
       subGidRanges = [{ startGid = 130000; count = 10000; }];

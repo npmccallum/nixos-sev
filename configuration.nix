@@ -23,6 +23,7 @@ in {
   imports = [ ./hardware-configuration.nix ./sshonly.nix ./ddns.nix ./podman.nix ./sev.nix ];
   system.stateVersion = "19.09";
 
+  boot.kernelPackages = pkgs.linuxPackages_latest;
   boot.loader.systemd-boot.enable = true;
   boot.loader.efi.canTouchEfiVariables = true;
   boot.kernel.sysctl = { "fs.inotify.max_user_watches" = "524288"; };

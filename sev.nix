@@ -13,4 +13,5 @@
           KVM_AMD_SEV y
           '';
   }];
+  boot.kernelParams = [ "mem_encrypt=on" "kvm_amd.sev=1" ];
 }

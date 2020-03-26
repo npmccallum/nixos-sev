@@ -97,6 +97,15 @@ in {
 	"ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABgQDo8OxuYPC0uXSv6W5DM0yTnkL4W0xWzzkhWkAU/BvOeLIFFc6JJ5F6PltmxpZcPCySkOYs456hMyTGLQid0v4zSBMX5/E8+djEIiinvd6hqY3JuFEqAsg1SXusL+IrI1qlcTjy9MJxWPntTZGQ4Kq1HzEpTBaIdRUaPdd6/6SsYWJKY3lwEt/JUOCx618qxhWcU2ms8xDu4zxcu4AiyQM46lqTGOSO5gWu+5g8CV+UNiJWiTGrRxXuekgwLCvkCuYoBcQs4Ojft1rFf3MaBhSdytphmQ6x4iE5JPnr01JTGbB6wneHmllS71EMJ7teizAF+/jPw8MCV2FGHOkPRG0FFBBiMODXC7StmoSEM9Y+tv1Lz9KavCElfn623X8CbxCSUalj/88I9rWocXQqBmxXU7mEGEGDGB0ZXZX7S9yZ3r8nzY4dITnXziw6IooaQURY6D7Oi94Znsggq3SwdzhhjSTUfSRppsLPqcUM5rD+0PekGC9UR+GSdjCslL6xqwE= bdas@localhost.localdomain"
       ];
     };
+    harald = {
+      shell = posh "" "--device /dev/kvm --device /dev/sev" "quay.io/enarx/fedora";
+      isNormalUser = true;
+      subUidRanges = [{ startUid = 160000; count = 10000; }];
+      subGidRanges = [{ startGid = 160000; count = 10000; }];
+      openssh.authorizedKeys.keys = [
+        "ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABAQDCZir2OaQTu+WIjBqlc1dzxSBlWuozlr9U9ntxKNsiYlx7LdVGDdoDDDT5QAHul8LA1gNWMNMJd4qhxy09Hc47vDJE8zhUCbJCQHdZXDxmKQ9DoF1IVi5XCWWZhAG4QVMxX9n1CH12UgXJ5I9qr00tlSmTcS2CfCEAVMquKYYUq6dNetvXnRXXo9fybhDWHKKFnrRFtfFtHWl3VAq/nDaCgcY/S3elYhXxD1eskYdQNGhV7Wr6ar4fXwg328tcD8UoxfMHImhcKqR5/peK567Ocng1+pl4KYIASHFMuWvR4iMFDARClN1ieXNTCofUoeIy40b8/C6d528mwtuf0TAf cardno:000606910294"
+      ];
+    };
   };
 }
 
